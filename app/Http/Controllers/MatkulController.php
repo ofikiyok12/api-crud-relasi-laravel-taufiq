@@ -5,12 +5,27 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\MatkulController;
 use Illuminate\Http\Request;
 use App\Models\MatkulModel;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Http;
+>>>>>>> 1430a11525376c6a300807478f88f0194ea3e889
 
 class MatkulController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+<<<<<<< HEAD
+=======
+    public function ambil()
+    {
+        $matakuliah = MatkulModel::all();;
+        
+        return view('task.index',compact('matakuliah'));
+    }
+
+
+>>>>>>> 1430a11525376c6a300807478f88f0194ea3e889
     public function index()
     {
         $matakuliah = MatkulModel::all();

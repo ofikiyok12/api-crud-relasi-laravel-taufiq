@@ -14,6 +14,13 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
+=======
+        //  $mahasiswa = mahasiswaController::all();
+        //  return response()->json([
+        //      'data'=> $mahasiswa
+        //  ]);
+>>>>>>> 1430a11525376c6a300807478f88f0194ea3e889
 
          $mahasiswa = MahasiswaModel::all();
          return response()->json($mahasiswa, 200);  
