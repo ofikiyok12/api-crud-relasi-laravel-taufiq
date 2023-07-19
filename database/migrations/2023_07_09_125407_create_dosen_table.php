@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jurusan', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama',50);
-            $table->enum('D3 SI', 'D3 RPL', 'S1 RPL', 'S1 ILKOM');
+        Schema::create('dosen', function (Blueprint $table) {
+            $table->increments('id')-> unique();
+            $table->string('nama_dosen',50);
+            $table->string('alamat',10);
+            $table->string('no_hp',10);
+            $table->string('bidang_ahli',50);
             $table->timestamps();
         });
     }
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('matakuliah');
+        Schema::dropIfExists('dosen');
     }
 };
